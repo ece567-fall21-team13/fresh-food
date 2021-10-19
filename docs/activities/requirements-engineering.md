@@ -8,9 +8,10 @@ We observed food delivery companies mainly DoorDash and Zomato. We observed the 
 to the restaurants. The food delivery business was found to be time-bounded and involves problems like routing, travelling salesman.
 We also observed how existing food delivery companies have integrated their system with restaurants.
 
-# Choosing a SRS lanague - We choose structured language
+# Choosing a SRS languague - We choose structured language
 > TODO: We do understand that requirement specification is usually at a more granular level, but here we defining requirements for a system as a whole.  
- 
+> We could offer SRS for submodules in future iteration.  
+  
 **Food Delivery/Operational Software/SRS/3.3.2**
 
 **Function** Deliver Food from restaurant to customer.
@@ -38,12 +39,13 @@ The Driver then picks the order from the restaurant and delivers to customer.
 
 
 # Functional requirements
-1. The system should be able to list available restaurants which could deliver as a catalog to the customer.   
-2. The customer should get a list of items of a selected restaurant.
+1. The system should be able to list available restaurants which could deliver as a **catalog** to the customer.   
+2. The customer should get a **list of items** of a selected restaurant.
 3. The customer should be able to select and order the item.
-4. The order should be shown to the restaurant. 
+4. The order should be notified to the restaurant and take a confirmation from the restaurant.   
 5. The system should assign an UNASSIGNED INPROGRESS order to a Driver.
-6. The customer should be able to track the oder.
+6. The customer should be able to **track** the oder.
+7. The restaurants should be able to access average delivery time for a zipcode.
 
 # Non-functional requirements
 1. The system should be able to able to deliver orders under 1 hour.
@@ -51,5 +53,6 @@ The Driver then picks the order from the restaurant and delivers to customer.
 3. The number of restaurants is expected to be somewhere around 25, but system should support more number of restaurants.
 4. The customer should be highly available as food delivery business is real time operational in nature.
 5. The system should be strongly consistent when placing orders, processing payments etc.
+6. The customer information should be stored securely eg. customer email, address, or any sensitive data.  
 
 # Use-case diagram
