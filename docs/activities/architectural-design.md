@@ -39,7 +39,7 @@ This service will manage the placement of food orders. It will save the order pl
 1. The restaurant accepts the order 
 2. Customers can check the status of their orders.
 3. Delivery person can check if the order is ready to be picked up.
-4. Notifies the customer of any delay or any change in the order, if necessary (Using Notification Service)
+4. Notifies the customer of any delay or any change in the order, if necessary
 
 ### User Profile Management & Preferences Service
 The actors in the system, namely, customers, restaurant , delivery person will need a way to create their profile with personal information, contact, address, and will be assigned a role based on their profile. Individual actors will also have preferences based on their role. For example, customers may have set preferences for selecting from a fixed set of restaurants or zip codes or cuisines. Delivery person might have a preference for delivering only within their specific area codes depending on its current location. This service will manage the profiles and preferences of all such actors across the board.
