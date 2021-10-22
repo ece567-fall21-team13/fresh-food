@@ -7,6 +7,11 @@ The following action items were assigned the highest priority as much of subsequ
 MVC, 4 plus 1
 
 ## Language and Framework choice:
+1. Application modality:
+
+    **Iteration 1:** For universality and ease of access, we have decided to create a web application. A web application will ensure that we have the widest possible audience reach, and that there are likely to be fewer compatibility issues between various mobile OS releases.
+
+    **Iteration 2:** Develop mobile application
 1. Application modality - web or mobile? For universality and ease of access, we have decided to create a web application, rather than mobile. A web application will ensure that we have the widest possible audience reach, and that there are likely to be fewer compatibility issues between various mobile OS releases.
 2. In the preliminary stages of development, we have chosen to write our application in Python due to simplicity of syntax, universality of implementation, and prior group coding experience.
 3. As the application is going to be web-based, we will be using the Flask web framework. The choice was made due to the vast array of existing Flask libraries that would ease our implementation and facilitate speedy delivery.
