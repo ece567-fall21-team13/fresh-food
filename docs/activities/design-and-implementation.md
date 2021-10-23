@@ -42,3 +42,23 @@ WIP
 
 ### Sequence Diagram
 ![u](../assets/fresh-food-sequence-diagram.drawio.svg)
+
+# Algorithm Design
+The task of our restaurant-vehicle-destination system is to take in food orders, restaurants, and drivers, and calculate the average time-to-delivery with option to vary number of drivers and number of restaurants.
+
+Constraints: Our inputs are O orders, R restaurants, and D drivers. Each driver D, can have 0 to O number of orders assigned to them. Logically, we would presume that the number of orders is spread out almost evenly among the drivers. Each driver D takes some time, t, to deliver 1 order. An order has an associated restaurant, time placed, time delivered, driver, and zipcode to deliver to. A restaurant has X amount of orders placed to it, and has an associated zipcode. A driver has an origin point and can be assigned orders to deliver.
+
+Inputs: # of drivers, # of restaurants, # of orders
+
+Problem: minimize the delivery time for each order.
+
+Outputs: average time-to-delivery
+
+## Algorithm process:
+1. Intialize a graph made up of the restaurants and drivers as nodes with edges being travel time.
+2. Perform Dijkstra's algorithm on the graph to find the smallest routes between drivers and restaurants.
+3. Intialize a new graph of restaurants and delivery destinations as nodes with edges being travel time.
+4. Perform Dijkstra's algorithm on the graph to find the smallest routes between restaurants and delivery destinations.
+5. Do a greedy approach and match drivers to the restaurants that they are closest to.
+6. Then, evenly distribute the orders among the drivers, choosing orders that are closest to each other to assign to a single driver by performing a modified version of Dijkstra's with order destinations as the only nodes and finding localized orders.
+7. Compute the average time calculated by adding the smallest route between driver and restaurant and smallest route between restaurant and order.
