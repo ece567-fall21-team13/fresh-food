@@ -1,6 +1,5 @@
 # Architectural Design
-The Architectural Design phase in the first iteration entails an abstract discussion of the basic building blocks for our system. 
-The following action items were assigned the highest priority as much of subsequent development hinges on their completion:
+The Architectural Design phase in the first iteration entails an abstract discussion of the basic building blocks for our system. The following action items were assigned the highest priority as much of subsequent development hinges on their completion:
 
 
 ## Choose an architecture and why - Monolithic, Service Oriented, Lambda, Microservices,
@@ -57,6 +56,7 @@ This service will be managing the data related to restaurants, menus, offerings,
 4. Check driver's location and assign order for delivery
 
 ### Driver Mapping Service
+This service will be responsible for mapping the order to the driver and sharing the driver's live location with the customer. So the customer can check where the order has reached.
 
 
 ###  adjust and reformat -
