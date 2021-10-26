@@ -10,7 +10,7 @@ Dymytriy:
 Kartik:
 1. Sequence diagram
 (Generated class diagram)
-2. Programming - mock demo of the front page
+2. Programming - db design
 
 Khyati:
 1. Complete use case diagram
