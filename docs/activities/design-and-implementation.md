@@ -55,10 +55,9 @@ Problem: minimize the delivery time for each order.
 Outputs: average time-to-delivery
 
 ## Algorithm process:
-1. Intialize a graph made up of the restaurants and drivers as nodes with edges being travel time.
-2. Perform Dijkstra's algorithm on the graph to find the smallest routes between drivers and restaurants.
-3. Intialize a new graph of restaurants and delivery destinations as nodes with edges being travel time.
-4. Perform Dijkstra's algorithm on the graph to find the smallest routes between restaurants and delivery destinations.
-5. Do a greedy approach and match drivers to the restaurants that they are closest to.
-6. Then, evenly distribute the orders among the drivers, choosing orders that are closest to each other to assign to a single driver by performing a modified version of Dijkstra's with order destinations as the only nodes and finding localized orders.
-7. Compute the average time calculated by adding the smallest route between driver and restaurant and smallest route between restaurant and order.
+1. Find the distance between a single driver and each restaurant, and assign that driver to the restaurant that results in the smallest distance.
+2. Repeat for all drivers.
+3. Find the distance between the restaurant and the delivery location from the order, and assign a driver, already assigned to that restaurant, to the order.
+4. If there are more orders than drivers, assign multiple orders to the driver.
+5. Calculate the estimated time to delivery for each order, based on the assignments.
+6. Compute the average time to delivery based on those estimates.
