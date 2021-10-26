@@ -16,5 +16,5 @@ export FLASK_ENV=development
 export FLASK_DEBUG=1
 export FLASK_APP=autoapp.py
 ```
-3. Run the development server - 
+3. Run the development server with current directory fresh-food/backend
 > ../venv/bin/python -m flask run
