@@ -7,5 +7,14 @@ Minor Project  #3 Fresh Food by Team 13
 * Postman API Team Link: https://ece567-fall21-team13.postman.co/workspace
 
 
-# How to run 
-source venv/bin/activate
+# How to run
+1. Activate the environment with -
+> source venv/bin/activate
+2. Set the appropriate env vars as necessary - 
+```shell
+export FLASK_ENV=development
+export FLASK_DEBUG=1
+export FLASK_APP=autoapp.py
+```
+3. Run the development server - 
+> ../venv/bin/python -m flask run
