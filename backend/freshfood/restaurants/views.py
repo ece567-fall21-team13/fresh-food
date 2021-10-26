@@ -22,6 +22,8 @@ def list_catalog(**kwargs):
     result = db.engine.execute("SELECT * from restaurants")
     for r in result:
         row_as_dict = dict(r)
+        # TODO hit the maps api for all the restaurant address and the customer's address.
+        # We'll have time in mins for all restaurants for that customer_uuid
         row_as_dict['time_to_deliver'] = '10 mins'
         response.append(row_as_dict)
     return response
