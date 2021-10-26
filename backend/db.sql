@@ -43,6 +43,7 @@ CREATE TABLE orders
     created_at timestamp,
     driver_uuid text references drivers(driver_uuid),
     status text,
-    customer_uuid text references customers(customer_uuid)
+    customer_uuid text references customers(customer_uuid),
+    restaurant_uuid text references restaurants(restaurant_uuid)
 );
 
