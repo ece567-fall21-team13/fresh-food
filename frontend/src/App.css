@@ -18,6 +18,11 @@
     justify-content: center;
 }
 
+.combinedTable {
+    display: flex;
+    justify-content: center;
+}
+
 .output {
     display: flex;
     justify-content: center;

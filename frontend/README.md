@@ -6,7 +6,9 @@ The UI interface shows the restaurants that have been partenered with, the custo
 
 ![first part of UI](./images/firstPartOfUI.png)
 ![second part of UI](./images/secondPartOfUi.png)
+![live orders](./images/liveOrder.png)
 
+The UI will show each order's estimated time to delivery for more insight into where bottlenecks might be.
 At the very bottom, FreshFood will clearly be able to view their average time to delivery, as well as the parameters they have selected for number of restaurants, drivers, etc.
 
 ## Running the front end
