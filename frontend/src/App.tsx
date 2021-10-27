@@ -19,10 +19,18 @@ type Driver = {
   address: string
 }
 
+type LiveOrder = {
+  id: number,
+  customerName: string,
+  driverName: string,
+  timeToDelivery: number
+}
+
 type MyState = {
   restaurants: Restaurant[],
   drivers: Driver[],
   customers: Customer[],
+  live_orders: LiveOrder[],
   avgDeliveryTime: number 
 }
 
@@ -119,7 +127,22 @@ class App extends React.Component {
     {name: 'Ruby-Leigh Acevedo', address: "251 Joyce Kilmer Ave, New Brunswick, NJ 08901"},
     {name: 'Vivek Potts', address: "313 Powers St, New Brunswick, NJ 08901"},
   ],
+    live_orders: [
+    ],
     avgDeliveryTime: 10
+  }
+
+  componentDidMount() {
+    
+    let modifiedLiveOrders = this.state.live_orders
+
+    for (let i = 0; i < 20; i++) {
+      modifiedLiveOrders.push({id: i+1, customerName: this.state.customers[i].name, driverName: this.state.drivers[i].name, timeToDelivery: .25*i*i*+1-0.2*i})
+    }
+
+    this.setState({
+      live_orders: modifiedLiveOrders
+    })
   }
 
   render() {
@@ -175,6 +198,29 @@ class App extends React.Component {
                   <tr>
                     <td>{driver.name}</td>
                     <td>{driver.address}</td>
+                  </tr>
+                )
+              })
+            }
+          </table>
+        </div>
+
+        <div className="combinedTable">
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Customer Name</th>
+              <th>Driver Name</th>
+              <th>Time to Delivery</th>
+            </tr>
+            {
+              this.state.live_orders.map ( (live_order) => {
+                return (
+                  <tr>
+                    <td>{live_order.id}</td>
+                    <td>{live_order.customerName}</td>
+                    <td>{live_order.driverName}</td>
+                    <td>{live_order.timeToDelivery}</td>
                   </tr>
                 )
               })
