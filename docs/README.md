@@ -49,8 +49,6 @@ The objective is to create a state-of-the-art takeout delivery system that is ca
 
 
 ## System Architecture Diagram
-<<<<<<< Updated upstream
-![System Architecture](assets/System%20Architecture%20Diagram.drawio.svg)
 =======
 ![System Architecture](assets/System%20Architecture%20Diagram.drawio.svg)
 >>>>>>> 43d042856eea88402803a9cbaa8313d1a271c641
