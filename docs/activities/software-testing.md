@@ -1,7 +1,19 @@
 # Software Testing
 
+<<<<<<< Updated upstream
 # Approach / Details 
 Testing will proceed in this order: unit testing, component testing, then system testing.
+=======
+# Approach / Details
+
+The testing of our software will be done in three phases.
+
+* Development Testing
+* Release Testing
+* User Testing
+
+Development testing will proceed in this order: unit testing, component testing, then system testing.
+>>>>>>> Stashed changes
 
 ## Unit tests
 Each individual object class shall be tested separately by evaluating each method in the class by at least 3 separate values/conditions that lie in different equivalence partitions. Each class attribute should be retrieved and attempt to be set, to ensure proper visibility of class components are realized, and placing the class in all possible states.
