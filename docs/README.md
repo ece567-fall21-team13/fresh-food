@@ -2,18 +2,17 @@
 
 ## Project Vision:
 
-<<<<<<< Updated upstream
-# Activity Links (Click links to see details)
+
+# Activity Links 
 =======
 The objective is to create a state-of-the-art takeout delivery system that is capable of pairing freelance drivers with restaurants in need of delivering fresh takeout meals to customers. The overarching goal is to minimize the delivery time for each customer, and deliver the maximum meal throughput for each restaurant to maximize the business value.
 
-<<<<<<< HEAD
+
 # Activity Links
 
 =======
 # Activity Links (Click links to see details)
->>>>>>> 43d042856eea88402803a9cbaa8313d1a271c641
->>>>>>> Stashed changes
+
 1. [Requirements Engineering](activities/requirements-engineering.md)
 2. [System Modeling](activities/system-modeling.md)
 3. [Architectural Design](activities/architectural-design.md)
@@ -22,7 +21,7 @@ The objective is to create a state-of-the-art takeout delivery system that is ca
 6. [Evaluation](activities/evaluation.md)
 
 # Iteration & processes
-<<<<<<< HEAD
+
 
 1. Each iteration with last 1 week and all changes activities,code, documentation, diagrams will be pushed to **iteation1** branch.
 2. After each iteration will we'll release a git tag (like v1.0.0)
