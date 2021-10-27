@@ -20,7 +20,7 @@ def place_order(**kwargs):
     restaurant_uuid = kwargs.get('restaurant_uuid')
 
     drivers_result = db.engine.execute("SELECT * from drivers")
-    for r in drivers_result:
+    for r in drivers_result: 
         row_as_dict = dict(r)
         response.append(row_as_dict)
     order_uuid = "odr::" + str(generate_uuid())
