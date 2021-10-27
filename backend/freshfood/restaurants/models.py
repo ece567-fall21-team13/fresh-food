@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """User models."""
-import datetime as dt
 
 from freshfood.database import Column, Model, db
-from freshfood.extensions import bcrypt
 from freshfood.utils import generate_uuid
 
 

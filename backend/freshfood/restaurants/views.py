@@ -1,15 +1,9 @@
 """Customer views."""
-from flask import Blueprint, request
-from flask_apispec import use_kwargs, marshal_with
-from flask_jwt_extended import jwt_required, create_access_token, current_user
-from marshmallow import RAISE
-from sqlalchemy.exc import IntegrityError
-from webargs.flaskparser import use_args
+from flask import Blueprint
+from flask_apispec import use_kwargs
+
 from freshfood.database import db
-from freshfood.exceptions import InvalidUsage
-from .models import Restaurants
 from .serializers import restaurant_schema
-from flask import Flask, request, jsonify
 
 blueprint = Blueprint('user', __name__)
 
