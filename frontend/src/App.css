@@ -1,0 +1,43 @@
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurantTable {
+    display: flex;
+    justify-content: center;
+}
+
+.customerTable {
+    display: flex;
+    justify-content: center;
+}
+
+.driverTable {
+    display: flex;
+    justify-content: center;
+}
+
+.output {
+    display: flex;
+    justify-content: center;
+}
+
+.outputLeft {
+    margin-right: 5em;
+}
+
+.outputRight {
+    margin-bottom: 1em;
+}
+
+table {
+    border: 1px solid black;
+    width: 700px;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+}
+
+table tr {
+    text-align: left;
+}
