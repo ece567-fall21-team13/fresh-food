@@ -32,7 +32,34 @@ curl --location --request POST 'localhost:5000/api/restaurants/catalog' \
 ]
   ```
 * **/api/customer/place_oder** -> 
-  * 
-* **api/customer/live_order** -> returns order_id, driver_id, time to delivery
-  * 
+  * Request Command - 
+```shell
+curl --location --request POST 'localhost:5000/api/customer/place_oder' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "customer_uuid": "cus::0cdfbbe3-eb83-4e55-9559-a3f57347633d",
+    "restaurant_uuid":"res::6b5de626-2200-477b-9431-542365497580"
+}'
+```
+  * Sample Response  - 
+```JSON
+{
+    "customer_id": "cus::0cdfbbe3-eb83-4e55-9559-a3f57347633d",
+    "order_uuid": "odr::deb92895-7fa2-4d2d-a94e-7d500f4bc3da",
+    "restaurant_uuid": "res::6b5de626-2200-477b-9431-542365497580",
+    "status": "CREATED",
+    "time_delivery": '35 mins'
+}
+```
 * **api/admin/global_average_time_metric** -> returns **mean** time_to_delivery for all orders existing in the system
+  * Request Command - 
+```shell
+curl --location --request GET 'localhost:5000/api/admin/global_average_time_metric' \
+--header 'Content-Type: application/json'
+```
+  * Sample Response  - 
+```JSON
+{
+    "avg_time_to_deliver": "31.5 mins"
+}
+```
