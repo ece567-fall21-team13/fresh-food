@@ -5,6 +5,9 @@ from flask_apispec import use_kwargs
 from freshfood.database import db
 from .serializers import restaurant_schema
 
+from geopy.geocoders import Nominatim
+from geopy import distance
+
 blueprint = Blueprint('user', __name__)
 
 
@@ -13,11 +16,10 @@ blueprint = Blueprint('user', __name__)
 def list_catalog(**kwargs):
     response = []
     customer_uuid = kwargs.get('customer_uuid')
-    result = db.engine.execute("SELECT * from restaurants")
 
     drivers_result = db.engine.execute("SELECT * from drivers")
     drivers = []
-    restaurants_result = db.engine.execute("SELECT * from restaurants")
+    restaurants_result = db.engine.execute("SELECT address, name, restaurant_uuid from restaurants")
     restaurants = []
      #hit the maps api for all the restaurant address and the customer's address.
     # We'll have time in mins for all restaurants for that customer_uuid
@@ -81,7 +83,23 @@ def list_catalog(**kwargs):
 
         order['time_to_deliver'] = time_to_reach_restaurant + time_restaurant_to_order
    
-    return orders #With fields, cname, address, rname, latitude, longitude, time_to_deliver
+    
+    response = [] # Create reponse variable data structure
+    for r in restaurants_result:
+        row_as_dict = dict(r)
+        response.append(row_as_dict)
+
+    for restaurant in response:
+        sumOfTimes = 0
+        count = 0
+        for order in orders:
+            if restaurant['name'] == order['rname']:
+                sumOfTimes += order['time_to_deliver']
+                count += 1
+        
+        restaurant['time_to_deliver'] = sumOfTimes/count
+    
+    return response #With fields address, name, restaurant_uuid, time_to_deliver
 
 def byTime(e):
     return e['time_to_reach_restaurant']
